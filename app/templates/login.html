@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Login Page</h1>
+
+
+<form action="" method='POST'>
+    {{ form.hidden_tag() }}
+   <div class="form-group"> 
+    <fieldset>
+        {{ form.avenger_name.label }}
+        {{ form.avenger_name(class='form-control', placeholder='Avenger Name') }}
+    </fieldset>
+    <fieldset>
+        {{ form.password.label }}
+        {{ form.password(class='form-control', placeholder='Password') }}
+    </fieldset>
+    <fieldset>
+        {{ form.remember_me(class='form-check_input') }}
+        {{ form.remember_me.label }}
+    </fieldset>
+   </div>
+        {{ form.submit(class='btn btn-success') }}
+    
+   </div>
+</form>
+
+{% endblock content %}

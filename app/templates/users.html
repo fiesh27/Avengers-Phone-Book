@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Avenger's Phone Book</h1>
+
+<ol>
+    {% for user in users %}
+    <li>{{ user.avenger_name }} - {{user.phone_num}}</li>
+    {% endfor %}
+</ol>
+
+{% endblock content %}
